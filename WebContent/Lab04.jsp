@@ -1,12 +1,20 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
+<%@ page errorPage="errorPage.jsp" %>
+
 <%! 	public void jspInit(){
 			ServletConfig sConfig = getServletConfig();
 			String dburl = sConfig.getInitParameter("dburl");
 			System.out.println("The dburl is "+ dburl);
 		}
 %>
+
+<jsp:useBean id="DatabaseBean" class="businesslogic_lab04.DatabaseBean" />
+<jsp:setProperty name="DatabaseBean" property="URL" value="" />
+
+<p>URL: <jsp:getProperty name="DatabaseBean" property="URL" /></p>
+
 
 		<div id="content">
 			<div id="stylized" class="myform">

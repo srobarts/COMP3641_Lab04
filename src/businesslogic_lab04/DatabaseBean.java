@@ -2,7 +2,6 @@ package businesslogic_lab04;
 
 import java.sql.*;
 import java.util.*;
-import java.io.*;
 
 public class DatabaseBean
 {
@@ -10,10 +9,23 @@ public class DatabaseBean
 	private Connection con = null;
 	private Statement stmt = null;
 	private ResultSet queryResults = null;
-	private Vector<String> vRows = null;
-	private Vector<String> headers = null;
+	@SuppressWarnings("rawtypes")
+	private Vector vRows = null;
+	@SuppressWarnings("rawtypes")
+	private Vector headers = null;
+	private String url = "";
 
 	public DatabaseBean(){}
+	
+	public void setURL(String url)
+	{
+		this.url = url;
+	}
+	
+	public String getURL()
+	{
+		return (url);
+	}
 
 	public void connect(Properties props)
 	{
@@ -40,6 +52,7 @@ public class DatabaseBean
 		queryString = qs;
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void runQuery()
 	{
 		vRows = new Vector();
@@ -66,6 +79,7 @@ public class DatabaseBean
 		
 	}
 
+	@SuppressWarnings("rawtypes")
 	public Vector getResultSet() {
 
 		return vRows;
@@ -76,6 +90,7 @@ public class DatabaseBean
 		queryResults = rs;
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void generateMetaData() throws SQLException {
 
 		ResultSetMetaData rsmd = queryResults.getMetaData();
@@ -88,6 +103,7 @@ public class DatabaseBean
 	}
 
 
+	@SuppressWarnings("rawtypes")
 	public Vector getColumnHeaders() {
 
 		return headers;

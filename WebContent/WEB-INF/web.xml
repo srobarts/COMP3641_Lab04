@@ -2,16 +2,16 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Lab04</display-name>
   
-  <welcome-file-list>
-    <welcome-file>lab04.jsp</welcome-file>
-  </welcome-file-list>
+ 	<welcome-file-list>
+		<welcome-file>lab04.jsp</welcome-file>	
+	</welcome-file-list>
 
 	<servlet>
-		<servlet-name>lab04</servlet-name>
-		<jsp-file>Lab04.jsp</jsp-file>
+		<servlet-name>Lab04</servlet-name>
+		<jsp-file>/Lab04.jsp</jsp-file>
 		<init-param>
 			<param-name>dburl</param-name>
-			<param-value>stuff</param-value>
+			<param-value>http://blow.me</param-value>
 		</init-param>
 	</servlet>
 
@@ -19,5 +19,12 @@
   		<servlet-name>Lab04</servlet-name>
   		<url-pattern>/lab04</url-pattern>
   	</servlet-mapping>
+  	
+  	<error-page>
+  		<exception-type>java.lang.Throwable</exception-type>
+  		<location>/errorPage.jsp</location>
+  	</error-page>
+  	
+  	
   	
 </web-app>
