@@ -14,6 +14,9 @@ public class DatabaseBean
 	@SuppressWarnings("rawtypes")
 	private Vector headers = null;
 	private String url = "";
+	private String driver = "";
+	private String username = "";
+	private String password = "";
 
 	public DatabaseBean(){}
 	
@@ -26,12 +29,42 @@ public class DatabaseBean
 	{
 		return (url);
 	}
+	
+	public void setDriver(String driver)
+	{
+		this.driver = driver;
+	}
+	
+	public String getDriver()
+	{
+		return (driver);
+	}
+	
+	public void setUsername(String username)
+	{
+		this.username = username;
+	}
+	
+	public String getUsername()
+	{
+		return (username);
+	}
+	
+	public void setPassword(String password)
+	{
+		this.password = password;
+	}
+	
+	public String getPassword()
+	{
+		return (password);
+	}
 
-	public void connect(Properties props)
+	public void connect()
 	{
 		try {
-			Class.forName( props.getProperty("Driver") );
-			con = DriverManager.getConnection( props.getProperty("URL"), props );
+			Class.forName( driver );
+			con = DriverManager.getConnection( url, username, password );
 
 		} catch(ClassNotFoundException ex) {
 			ex.printStackTrace();
