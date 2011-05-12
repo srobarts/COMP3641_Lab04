@@ -6,4 +6,6 @@
 	
 	</div> <!-- wrapper div close -->
 	
+</body>
+	
 </html>

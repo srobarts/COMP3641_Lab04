@@ -1,8 +1,6 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-<body>
-	<div id="wrapper">
 		<div id="content">
 			<div id="stylized" class="myform">
 				<form id="form" name="form" method="post" action="query_database">
@@ -24,8 +22,5 @@
 				</form>
 			</div>
 		</div>
-	</div>
-</body>
-
 
 <jsp:include page="footer.jsp"></jsp:include>

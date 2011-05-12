@@ -26,10 +26,12 @@ p, h1, form, button{border:0; margin:0; padding:0;}
 
 /* ----------- Header ------------ */
 #header {
-	text-align:center;
-	height:80px;
-	padding-top:30px;
-	width:100%;
+	position: relative;
+	background-color: #FFFFFF;
+    height: 190px;
+    padding-top: 10px;
+    text-align: left;
+    width: 100%;
 }
 
 hr {
@@ -41,6 +43,16 @@ h1 {
 	font-size:18px;
 	font-weight:bold;
 	margin-bottom:8px;
+}
+
+img.header_image {
+	padding-left:90px;
+}
+
+.header_text {
+	font-size:48px;
+	font-weight:bold;
+	color:#A60000;
 }
 
 /* ---------- Content ------------ */
@@ -58,42 +70,17 @@ h1 {
 	padding-top:10px;
 }
 
-/* -------- Applet ---------------*/
-
-#applet_image {
-    height: 400px;
-    margin-top: 100px;
-    position: relative;
-    text-align: center;
-    width: 1000px;
-}
-
-#applet button{
-	clear:both;
-	margin-left:150px;
-	width:125px;
-	height:31px;
-	background:#666666 url(img/button.png) no-repeat;
-	text-align:center;
-	line-height:31px;
-	color:#FFFFFF;
-	font-size:11px;
-	font-weight:bold;
-	margin:5px;
-}
-
 /* -------- Footer --------------- */
 
 #footer {	
+	position: relative;
 	background-color: #777777;
     border: 1px solid #777777;
     color: #EFEFEF;
     height: 30px;
-    left: 139px;
     padding-top: 10px;
-    position: relative;
     text-align: center;
-    width: 1000px;
+    width: 100%;
 }
 
 
