@@ -3,17 +3,29 @@
 
 <%@ page errorPage="errorPage.jsp" %>
 
-<%! 	public void jspInit(){
-			ServletConfig sConfig = getServletConfig();
-			String dburl = sConfig.getInitParameter("dburl");
-			System.out.println("The dburl is "+ dburl);
-		}
+<%! 	
+	private String url;
+	private String driver;
+	private String username;
+	private String password;
+
+	public void jspInit(){
+		ServletConfig config = getServletConfig();
+		driver = config.getInitParameter("driver");
+		url = config.getInitParameter("url");
+		username = config.getInitParameter("username");
+		password = config.getInitParameter("password");
+		
+	}
 %>
 
 <jsp:useBean id="DatabaseBean" class="businesslogic_lab04.DatabaseBean" />
-<jsp:setProperty name="DatabaseBean" property="URL" value="" />
+<jsp:setProperty name="DatabaseBean" property="URL" value="${dburl }" />
 
-<p>URL: <jsp:getProperty name="DatabaseBean" property="URL" /></p>
+<p>DRV: <%= driver %></p>
+<p>URL: <%= url %></p>
+<p>USER: <%= username %></p>
+<p>PASS: <%= password %></p>
 
 
 		<div id="content">
@@ -30,7 +42,7 @@
 					<label>Query:
 					<span class="small">Please input your query:</span><br />
 					</label>
-					<input SIZE=50 name="query" id="query" />
+					<input SIZE="50" name="query" id="query" />
 					
 					<button type="submit">Submit</button>
 					<div class="spacer"></div>

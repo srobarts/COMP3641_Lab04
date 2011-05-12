@@ -10,14 +10,30 @@
 		<servlet-name>Lab04</servlet-name>
 		<jsp-file>/Lab04.jsp</jsp-file>
 		<init-param>
-			<param-name>dburl</param-name>
-			<param-value>http://blow.me</param-value>
-		</init-param>
+    		<param-name>url</param-name>
+    		<param-value>jdbc:sqlserver://Beangrinder.bcit.ca</param-value>
+    	</init-param>
+    	<init-param>
+    		<param-name>driver</param-name>
+    		<param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    	</init-param>
+    	<init-param>
+    		<param-name>dbname</param-name>
+    		<param-value>jspweb</param-value>
+    	</init-param>
+    	<init-param>
+    		<param-name>username</param-name>
+    		<param-value>javastudent</param-value>
+    	</init-param>
+    	<init-param>
+    		<param-name>password</param-name>
+    		<param-value>compjava</param-value>
+    	</init-param>
 	</servlet>
 
   	<servlet-mapping>
   		<servlet-name>Lab04</servlet-name>
-  		<url-pattern>/lab04</url-pattern>
+  		<url-pattern>/Lab04.jsp</url-pattern>
   	</servlet-mapping>
   	
   	<error-page>
