@@ -1,6 +1,13 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
+<%! 	public void jspInit(){
+			ServletConfig sConfig = getServletConfig();
+			String dburl = sConfig.getInitParameter("dburl");
+			System.out.println("The dburl is "+ dburl);
+		}
+%>
+
 		<div id="content">
 			<div id="stylized" class="myform">
 				<form id="form" name="form" method="post" action="query_database">
