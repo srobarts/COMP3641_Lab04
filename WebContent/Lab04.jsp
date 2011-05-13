@@ -55,7 +55,8 @@
 <%		
 	} else {
 		%>
-			<div id="tabledata">
+			<div id="tablecontent">
+			<h2 class="link"><a href="Lab04.jsp">Search Again</a></h2>
 		<%
 		
 		//form submitted

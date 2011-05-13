@@ -17,6 +17,17 @@ p.bigredtext {
 	font-weight:bold;
 }
 
+a {
+	text-decoration:none;
+	color:#777;
+}
+		
+a:hover {
+	color:#A60000;
+	text-decoration:underline;
+	}
+	
+
 /* ----------- Wrapper -----------*/
 #wrapper {
 	position:relative;
@@ -69,11 +80,32 @@ img.header_image {
 	padding-top:30px;
 }
 
+/* ---------- Tables ------------ */
+
+table, th, td {
+	border:1px solid #777;
+	border-collapse:collapse;
+}
+
 #tablecontent {
-	text-align:center;
-	height:1000px;
-	width:100%;
-	padding-top:10px;
+	left: 90px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+
+#tablecontent th {
+	background-color:#777;
+	color:#FFF;
+	height:20px;
+	padding:5px;
+	font-size:1.2em;
+}
+
+#tablecontent td {
+	padding:5px;
 }
 
 /* -------- Footer --------------- */
