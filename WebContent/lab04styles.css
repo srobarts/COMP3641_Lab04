@@ -11,6 +11,12 @@ body{
 p, h1, form, button{border:0; margin:0; padding:0;}
 .spacer{clear:both; height:1px;}
 
+p.bigredtext {
+	color:red;
+	font-size:1.2em;
+	font-weight:bold;
+}
+
 /* ----------- Wrapper -----------*/
 #wrapper {
 	position:relative;
