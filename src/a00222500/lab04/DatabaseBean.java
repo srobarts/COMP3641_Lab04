@@ -5,7 +5,7 @@ import java.util.*;
 
 public class DatabaseBean
 {
-	private String queryString = "empty";
+	private String queryString = "";
 	private Connection con = null;
 	private Statement stmt = null;
 	private ResultSet queryResults = null;

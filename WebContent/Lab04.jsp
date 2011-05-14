@@ -1,7 +1,7 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 
-<%@ page errorPage="errorPage.jsp" %>
+<%@ page errorPage="/errorPage.jsp" %>
 <%@ page language="java" import="java.sql.*" %>
 <%@ page language="java" import="java.util.*" %>
 
@@ -10,7 +10,6 @@
 	private String driver;
 	private String username;
 	private String password;
-	private String sqlResult = "";
 
 	public void jspInit(){
 		ServletConfig config = getServletConfig();
@@ -21,18 +20,12 @@
 		
 	}
 %>
-
-<jsp:useBean id="DatabaseBean" class="a00222500.lab04.DatabaseBean" scope="session" />
-<jsp:setProperty name="DatabaseBean" property="URL" value="<%= url %>" />
-<jsp:setProperty name="DatabaseBean" property="driver" value="<%= driver %>" />
-<jsp:setProperty name="DatabaseBean" property="username" value="<%= username %>" />
-<jsp:setProperty name="DatabaseBean" property="password" value="<%= password %>" />
-
 <%
 	if(request.getParameter("query") == null)
 	{
 %>
 		<div id="content">
+		
 		<div id="stylized" class="myform">
 			<form id="form" name="form" method="post" action="Lab04.jsp">
 				<p>Input a correct SQL statement below to query the database.<br />
@@ -55,8 +48,14 @@
 <%		
 	} else {
 		%>
+			<jsp:useBean id="DatabaseBean" class="a00222500.lab04.DatabaseBean" scope="session" />
+			<jsp:setProperty name="DatabaseBean" property="URL" value="<%= url %>" />
+			<jsp:setProperty name="DatabaseBean" property="driver" value="<%= driver %>" />
+			<jsp:setProperty name="DatabaseBean" property="username" value="<%= username %>" />
+			<jsp:setProperty name="DatabaseBean" property="password" value="<%= password %>" />
+		
 			<div id="tablecontent">
-			<h2 class="link"><a href="Lab04.jsp">Search Again</a></h2>
+			<h2 class="link"><a href="Lab04.jsp"><%= pageContext.getServletConfig().getInitParameter("linkText") %></a></h2>
 		<%
 		
 		//form submitted
@@ -101,7 +100,7 @@
 		%> </table> <%
 	}
 %>
-	</div>
+	</div> <!-- end content div -->
 
 <jsp:include page="footer.jsp"></jsp:include>
 

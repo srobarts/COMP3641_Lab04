@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="lab04styles.css" >
-<title>COMP 3641 Lab04 - Database JSP</title>
+<title>${initParam.applicationPageTitle}</title>
 </head>
 
 <body>

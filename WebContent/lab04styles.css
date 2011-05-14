@@ -75,9 +75,19 @@ img.header_image {
 /* ---------- Content ------------ */
 
 #content {
+	position:relative;
 	height:400px;
 	width:100%;
-	padding-top:30px;
+	padding-top:10px;
+}
+
+/* ---------- Error Output -------- */
+
+#error_output {
+	position:relative;
+	left:40px;
+	width:95%;
+	height:400px;
 }
 
 /* ---------- Tables ------------ */
@@ -110,8 +120,13 @@ table, th, td {
 
 /* -------- Footer --------------- */
 
+.clearing {
+	height:0;
+	clear:both;
+}
+
 #footer {	
-	position: relative;
+	position:relative;
 	background-color: #777777;
     border: 1px solid #777777;
     color: #EFEFEF;
