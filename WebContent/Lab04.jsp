@@ -35,9 +35,7 @@
 				<p>SELECT * FROM beatles<br />
 				SELECT * FROM beatles WHERE title LIKE '%Help%'</p>
 				
-				<label>Query:
-				<span class="small">Please input your query:</span><br />
-				</label>
+				<h3>Please input your query:</h3><br />
 				<input SIZE="50" name="query" id="query" />
 				
 				<button type="submit">Submit</button>
@@ -96,6 +94,8 @@
 			%> </tr> <%
 			count++;
 		}
+		
+		DatabaseBean.cleanUp();
 		
 		%> </table> <%
 	}
